@@ -4,9 +4,13 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Users', [
       {
+        email: 'admin@gmail.com',
+        password: '123456',
         firstName: 'John',
         lastName: 'Doe',
-        email: 'example@example.com',
+        address: 'HA NOI',
+        gender: 1,
+        roleId: 'ROLE',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -14,6 +18,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Users', null, {});
+    //return queryInterface.bulkDelete('Users', null, {});
   },
 };
